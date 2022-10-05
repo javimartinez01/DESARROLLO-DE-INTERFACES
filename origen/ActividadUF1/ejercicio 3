@@ -1,0 +1,73 @@
+package Ejercicio3;
+
+/*
+ Enunciado
+ Programa que lea una variable entera mes y compruebe si el valor corresponde a un mes de 30 
+ días, de 31 o de 28. Supondremos que febrero tiene 28 días. Se debe comprobar que el valor 
+ introducido esté comprendido entre 1 y 12. 
+ 
+Después de obtener la variable entera el programa debe imprimir por pantalla el número de 
+dias del mes correspondiente y se mostrará además el nombre del mes. P.e si el usuario 
+introduce 5 se imprimirá por pantalla 31 y el nombre del mes mayo. 
+ */
+
+import java.util.Scanner;
+
+public class VariableMes {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduzca número de mes: ");
+		int mes = sc.nextInt();
+		
+		int numDias = 0;
+		String mesString;
+
+		switch (mes) {
+		case 1:  mesString = "Enero";
+				 numDias = 31;
+        break;
+		case 2:  mesString = "Febrero";
+		 		 numDias = 28;
+		        break;
+		case 3:  mesString = "Marzo";
+				 numDias = 31;
+		        break;
+		case 4:  mesString = "Abril";
+				 numDias = 30;
+		        break;
+		case 5:  mesString = "Mayo";
+				 numDias = 31;
+		        break;
+		case 6:  mesString = "Junio";
+				 numDias = 30;
+		        break;
+		case 7:  mesString = "Julio";
+				 numDias = 31;
+		        break;
+		case 8:  mesString = "Agosto";
+				 numDias = 31;
+		        break;
+		case 9:  mesString = "Septiembre";
+				 numDias = 30;
+		        break;
+		case 10: mesString = "Octubre";
+				 numDias = 31;
+		        break;
+		case 11: mesString = "Noviembre";
+				 numDias = 30;
+		        break;
+		case 12: mesString = "Dicimbre";
+				 numDias = 31;
+		        break;
+		default: mesString = "No existe un mes con ese nombre";
+		        break;
+		}
+		
+		System.out.println("El mes de " + mesString + " tiene " + numDias + " dias");
+		
+		System.out.println("Fin de programa");
+	}
+	
+}
