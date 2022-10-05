@@ -1,1 +1,63 @@
+package Ejercicio4;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+/*
+Enunciado
+Se quiere realizar un programa en Java que sirva para calcular la media de una serie de valores 
+numéricos  que  se  leen  por  teclado.Para  ello  se  quiere  que  el  programa  pida  al  usuario  por 
+teclado 10 números enteros, tanto positivos como negativos pero no decimales y los guarde en 
+un array.  
+A  continuación  calcula  y  muestra  por  separado  la  media  de  los  valores  positivos  y  la  de  los 
+valores negativos de los valores numéricos que se le han pedido al usuario y se han guardado en 
+un array. 
+ */
+
+public class MediaValoresNumericos {
+
+	public static void main(String[] args) {
+		
+        Scanner sc = new Scanner(System.in);
+        int i;
+        int positivo = 0; 
+        int negativo = 0; 
+        int[] numeros = new int[10];
+        double sumaPositivo = 0; 
+        double sumaNegativo = 0;                   
+        
+        // Introduce los números leidos por teclado
+        System.out.println("Introduce 10 números enteros: ");
+        for (i = 0; i < 10; i++) {
+            System.out.print("numeros[" + i + "]= ");
+            numeros[i]=sc.nextInt();
+        }
+
+        //Calculo de las sumas de números enteros positivos y negativos
+        for (i = 0; i < 10; i++) {
+            if (numeros[i] > 0){ 
+            	sumaPositivo += numeros[i];
+            	positivo++;
+            } else if (numeros[i] < 0){ 
+            	sumaNegativo += numeros[i];
+                negativo++;
+            }
+        }
+
+      // Calculo de las medias
+        if (positivo != 0) {
+            System.out.println("Media de los valores positivos: " + sumaPositivo / positivo);                
+        } else {
+            System.out.println("No ha introducido numeros positivos");
+        }
+        if (negativo != 0) {
+            System.out.println("Media de los valores negativos: " + sumaNegativo / negativo);
+        } else {
+            System.out.println("No ha introducido numeros negativos");
+        }
+        
+        System.out.println("Fin de programa");
+    }
+}
+
 
