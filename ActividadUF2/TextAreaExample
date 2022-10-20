@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <VBox fx:id="vbox" layoutX="164.0" layoutY="50.0" prefHeight="336.0" prefWidth="300.0000999999975" style="-fx-padding: 10;&#10;-fx-border-style: solid inside;&#10;-fx-border-width: 2;&#10;-fx-border-insets: 5;&#10;-fx-borderradius: 5;&#10;-fx-border-color: blue;&#10;">
+      <children>
+        <Label prefWidth="216.0" text="Label" />
+        <TextField prefHeight="20.0" prefWidth="266.0" />
+        <Button mnemonicParsing="false" text="Button" />
+        <Label text="Label" />
+        <TextArea prefHeight="185.0" prefWidth="267.0" wrapText="true" />
+      </children>
+    </VBox>
+  </children>
+</fx:root>
